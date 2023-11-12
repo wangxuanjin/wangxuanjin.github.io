@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box{
+            width: 200px;
+            height: 200px;
+        }
+        .box1{
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box" id="root">hello</div>
+
+    <script>
+
+        var root = document.getElementById("root");
+        console.log(root.id);  // root
+        root.id = "roots"  // 可以修改属性
+
+        console.log(root.className);  // box
+        root.className = "box box1"
+
+        // add() ：增加一个 class。
+        console.log(root.classList.add("mybox"));
+        // remove() ：移除一个 class。
+        console.log(root.classList.remove("box"));
+
+        // contains() ：检查当前元素是否包含某个 class。
+        if(root.classList.contains("box1")){
+            console.log("有");
+        }else{
+            console.log("没有");
+        }
+
+        // toggle()：如果box2 不存在就加入，否则移除
+        console.log(root.classList.toggle("box2"));
+
+        // innerHTML：直接读取某个内容，也能改写所有元素节点的内容，包括 <HTML> 和 <body> 元素
+        console.log(root.innerHTML);  // hell (直接读取内容)
+        console.log(root.innerHTML=("大家好"));  //大家好 (改写内容，把 hello 改成了 大家好 )
+        // innerText：和 innerHTML 类似，不同的是其无法识别元素（不能识别标签，会把标签识别成一个字符串）
+
+        var str = "<a href ='https://www.itbaizhan.com'>百战</a>";
+        root.innerHTML = str
+        // root.innerText = str
+
+    </script>
+    
+    
+</body>
+</html>

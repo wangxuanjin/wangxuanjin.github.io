@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="box">等待加载</div>
+
+    <script>
+
+        var box = document.getElementById("box")
+
+        // 加载图片资源例子
+        function loadImageAsync(url) {
+            const promise = new Promise(function (resolve, reject) {
+                // 异步处理：消耗时间的代码
+                const image = new Image();
+                image.onload = function () {
+                    resolve(image);
+                };
+                image.onerror = function () {
+                    reject(new Error('Couldnot load image at ' + url));
+                }
+                image.src = url;
+            })
+            return promise;
+        }
+
+        const promise = loadImageAsync("http://iwenwiki.com/api/musicimg/2.png");
+        promise.then(function (date) {
+            // 成功
+            box.appendChild(date)
+        }, function (error) {
+            // 失败
+            box.innerHTML = "图片加载失败"
+            console.log(error);
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // 通过 add() 方法向 Set 结构加入成员，结果表明 Set 结构不会添加重复的值。
+        var a = new Set();
+        var arr = [10, 20, 30, 40, 50]
+        arr.forEach(x => a.add(x));
+        console.log(a);    // Set(5) {10, 20, 30, 40, 50}
+
+        // Set 函数可以接受一个数组作为参数
+        var b = new Set([10, 20, 30]);
+        console.log(b);    // Set(3) {10, 20, 30}
+
+        // 数组去除重复成员的方法
+        var arr1 = [10,20,10,30,20,40]
+        var c = new Set(arr1);
+        // set可以使用扩展运算符读取数据
+        console.log(c);     // Set(4) {10, 20, 30, 40}
+        console.log([...c]);  // [10, 20, 30, 40]
+
+        // 字符串去除重复字符
+        console.log([...new Set("abcdabcdd")].join(""));  // abcd
+
+        // 向 Set 加入值的时候，不会发生类型转换，所以 5 和 "5" 是两个不同的值。
+        var d = new Set();
+        d.add(5)
+        d.add("5")
+        console.log(d);    // Set(2) {5, '5'}
+
+        // size属性：返回 Set 实例的成员总数
+        console.log(a.size);  // 5
+        console.log(b.size);  // 3
+        console.log(c.size);  // 4
+        console.log(d.size);  // 2
+
+    </script>
+
+</body>
+
+</html>

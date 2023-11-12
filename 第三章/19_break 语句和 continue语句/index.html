@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // 需求：如果i的值为5，则不再执行下去
+        for(i = 0 ; i < 100 ; i++){
+            if(i==5){
+                break;  // 跳出整个循环
+            }
+            console.log(i);
+        }
+
+
+        for(i = 0 ; i < 100 ; i++){
+            if(i==5){
+            continue;  // 跳出当前循环，继续执行后面循环
+            }
+            console.log(i);
+        }
+    </script>
+    
+</body>
+</html>

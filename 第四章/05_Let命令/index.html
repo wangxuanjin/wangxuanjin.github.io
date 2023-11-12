@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*
+            1.var关键字：函数及的作用域
+            2.let关键字：
+                let块级作用域（花括号级的作用）
+                let是不存在变量提升的
+                let是不能重复声明的         
+        */
+
+        var a = [];
+        for (var i = 0; i < 10; i++) {
+            a[i] = function () {
+                console.log(i);               
+            };
+        }
+        a[6]();  //  10
+        
+
+
+        var a = [];
+        for (let i = 0; i < 10; i++) {
+            a[i] = function () {
+                console.log(i);               
+            };
+        }
+        a[6]();  //  6
+
+
+
+    </script>
+
+</body>
+
+</html>

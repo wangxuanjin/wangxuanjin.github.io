@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // 实例属性
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            // 实例方法
+            say() {
+                console.log("Hello");
+            }
+
+            // 静态方法
+            static sayHello(){
+                console.log("sayHello");
+            }
+        }
+
+        // 实例对象
+        var p = new Person("iwen",20);
+        p.say()
+        console.log(p.name);
+
+       Person.sayHello() ;
+
+       // 静态属性
+       Person.age = 30;
+       console.log(Person.age);
+
+
+    </script>
+
+</body>
+
+</html>

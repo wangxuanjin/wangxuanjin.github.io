@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container{
+            display: flex;
+            width: 400px;
+            height: 250px;
+            background-color: red;
+
+            /* 弹性盒子在侧轴方向没有尺寸才能拉伸 */
+            /* align-items: stretch; */
+
+            /* 居中 */
+            /* align-items: center; */
+
+            /* align-items: flex-start; */
+
+            /* align-items: flex-end; */
+        }
+        /* 第二个div,侧轴居中对齐 */
+        /* .flex-item:nth-child(2){
+            align-self: center;
+        } */
+
+        .flex-item{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flex-container">
+        <div class="flex-item">flex item 1</div>
+        <div class="flex-item">flex item 2</div>
+        <div class="flex-item">flex item 3</div>
+    </div>
+    
+</body>
+</html>

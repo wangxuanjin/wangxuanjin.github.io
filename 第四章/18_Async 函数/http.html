@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // 网络请求之间有依赖关系，很多接口可能要依赖于上一个接口的数据才能完成
+        function ajax(url) {
+            return new
+                Promise(function (resolve, reject) {
+                    $.getJSON(url, function (result) {
+                        resolve(result)
+                    }, function (error) {
+                        reject(error)
+                    })
+                })
+        }
+        async function getInfo() {
+            let ids = await
+                ajax("http://iwenwiki.com/api/generator/list.php")
+            let names = await
+                ajax("http://iwenwiki.com/api/generator/id.php?id=" + ids[0])
+            let infos = await
+                ajax("http://iwenwiki.com/api/generator/name.php?name=" + names.name)
+            console.log(infos);
+        }
+
+        getInfo();
+
+    </script>
+
+</body>
+
+</html>

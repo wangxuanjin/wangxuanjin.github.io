@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    <table border="1" width="300px" height="200px">
+        <tr>
+            <td>单元格1</td>
+            <td>单元格2</td>
+            <td>单元格3</td>
+            <td>单元格4</td>
+            <td>单元格55</td>
+        </tr>
+        <tr>
+            <td>单元格6</td>
+            <td>单元格7</td>
+            <td>单元格8</td>
+            <td>单元格9</td>
+            <td>单元格10</td>
+        </tr>
+        <tr>
+            <td>单元格11</td>
+            <td>单元格12</td>
+            <td>单元格13</td>
+            <td>单元格14</td>
+            <td>单元格15</td>
+        </tr>
+        <tr>
+            <td>单元格16</td>
+            <td>单元格17</td>
+            <td>单元格18</td>
+            <td>单元格19</td>
+            <td>单元格20</td>
+        </tr>
+        <tr>
+            <td>单元格21</td>
+            <td>单元格22</td>
+            <td>单元格23</td>
+            <td>单元格24</td>
+            <td>单元格25</td>
+        </tr>
+    </table>
+
+
+
+        <p>合并单元格1和2:colspan</p>
+        <p>合并单元格15和20:rowspan</p>
+        <p>合并单元格9和14和19:rowspan</p>
+        <p>合并单元格11和12和16和17:colspan和rowspan</p>
+        <p>水平合并:保留左边,删除右边</p>
+        <p>垂直合并:保留上边,删除下边</p>
+    <table border="1" width="300px" heigh="200px">
+        <tr>
+            <td colspan="2">单元格1,2</td>
+            <td>单元格3</td>
+            <td>单元格4</td>
+            <td>单元格5</td>
+        </tr>
+        <tr>
+            <td>单元格6</td>
+            <td>单元格7</td>
+            <td>单元格8</td>
+            <td rowspan="3">单元格9,14,19</td>
+            <td>单元格10</td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2">单元格11,12,16,17</td>
+            <td>单元格13</td>
+            <td rowspan="2">单元格15,20</td>
+        </tr>
+        <tr>
+            <td>单元格18</td>
+        </tr>
+        <tr>
+            <td>单元格21</td>
+            <td>单元格22</td>
+            <td>单元格23</td>
+            <td>单元格24</td>
+            <td>单元格25</td>
+        </tr>
+    </table>
+</body>
+</html>

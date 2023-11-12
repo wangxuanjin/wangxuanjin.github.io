@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // charAt方法返回指定位置的字符，参数是从 0 开始编号的
+        var str = "itbaizhan"
+        console.log(str.length);  // 9(字符串长度为9)
+        console.log(str.charAt(4));  // i
+        // 打印出最后一个字符(两种方式)：
+        console.log(str.charAt(8));  // n
+        console.log(str.charAt(str.length-1)); // n
+
+        // 如果参数为负数，或大于等于字符串的长度， charAt 返回空字符串
+        console.log(str.charAt(-2));  // ""
+        console.log(str.charAt(9));   // ""
+
+
+    </script>
+    
+</body>
+</html>

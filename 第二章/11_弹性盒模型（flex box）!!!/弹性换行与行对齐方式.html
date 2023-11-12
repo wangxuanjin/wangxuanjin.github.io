@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container{
+            display: flex;
+            width: 500px;
+            height: 600px;
+            background-color: pink;
+            justify-content: space-between;
+
+            /* 父级宽度不够，弹性盒子换行显示 */
+            flex-wrap: wrap;
+           
+            /* 调整行对齐方式: 对单行弹性盒不生效 */
+            /* align-content: flex-start; */
+            /* align-content: flex-end; */
+
+            align-content: space-between;
+            /* align-content: space-around; */
+            /* align-content: space-evenly; */
+            
+        }
+        .flex-item{
+            width: 150px;
+            height: 100px;
+            background-color: blue;
+
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="flex-container">
+        <div class="flex-item">flex item 1</div>
+        <div class="flex-item">flex item 2</div>
+        <div class="flex-item">flex item 3</div>
+        <div class="flex-item">flex item 4</div>
+        <div class="flex-item">flex item 5</div>
+        <div class="flex-item">flex item 6</div>
+        <div class="flex-item">flex item 7</div>
+        <div class="flex-item">flex item 8</div>
+        <div class="flex-item">flex item 9</div>
+    </div>
+    
+</body>
+</html>

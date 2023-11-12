@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>我的第一个网页</title>
+    </head>
+    <body>
+        你好
+
+
+
+        <br>标签之标题：
+            <h1 align="center">一级标题</h1>
+            <h2 align="left">二级标题</h2>
+            <h3 align="right">三级标题</h3>
+            <h4>四级标题</h4>
+            <h5>五级标题</h5>
+            <h6>六级标题</h6>
+
+
+
+        <br>标签之段落，换行，水平线：
+            <p>这是一个段落</p>
+            <p>这是另一个段落</p>
+            <p>这个段落<br>演示了<br>分行的效果</p>
+            <hr color="red" width="900px" size="20"/>
+            <hr color="green" width="900px" size="20" align="left"/>
+            <hr color="blue" width="900px" size="20" align="right"/>
+
+
+
+        <br>标签之图片：
+            <br><img src="6.jpg" alt="司马懿" width="300px" heigth="400px" title="司马懿">
+        
+
+
+        <br>图片路径详解之绝对路径：
+            <br><img src="E:\前端学习\3.webp" alt="小姐姐" width="300px" heigth="400px" title="小姐姐">
+
+
+
+        <br>标签之超文本链接：
+            <br><a href="https://www.baidu.com/">百度</a>
+                <a href="https://www.163.com/">网易</a>
+                <a href="https://www.itbaizhan.com/">百战程序员</a>
+                <a href="https://www.baidu.com/"><img src="6.jpg" alt="司马懿" width="300px" heigth="400px" title="司马懿"></a>
+
+
+
+        <br>标签之文本
+            <p>三国演义司马懿</p>
+            <em>司马懿(定义着重文字)</em>
+            <b>司马懿(定义粗体文字)</b>
+            <i>司马懿(定义斜体文字)</i>
+            <strong>司马懿(定义加重文字)</strong>
+            <del>司马懿(定义删除文字)</del>
+            <span>司马懿(元素没有特定的含义)</span>
+
+
+        
+        <br>列表标签之有序列表
+          <ol>
+               <li>司马懿</li>
+               <li>诸葛亮</li>
+               <li>曹操</li>
+          </ol> 
+        <br>有序列表嵌套  
+            <ol>
+                <li>三国演义
+                    <ol type="a">
+                        <li>司马懿</li>
+                        <li>诸葛亮</li>
+                        <li>曹操</li>
+                    </ol>
+                </li>
+                <li>水浒传</li>
+                <li>西游记</li>
+            </ol>
+     
+
+
+        <br>列表标签之无序列表
+            <ul>
+                <li>司马懿</li>
+                <li>诸葛亮</li>
+                <li>曹操</li>
+            </ul>
+        <br>无序列表嵌套
+        <ul>
+            <li>三国演义
+                <ul type="square">
+                    <li>司马懿</li>
+                    <li>诸葛亮</li>
+                    <li>曹操</li>
+                </ul>
+            </li>
+            <li>水浒传</li>
+            <li>西游记</li>
+        </ul>
+
+
+
+        <br>标签之表格
+        <table border="1" width="300px" height="300px">
+            <tr>
+                <td>单元格</td>
+                <td>单元格</td>
+                <td>单元格</td>
+            </tr>
+            <tr>
+                <td>单元格</td>
+                <td>单元格</td>
+                <td>单元格</td>
+            </tr>
+            <tr>
+                <td>单元格</td>
+                <td>单元格</td>
+                <td>单元格</td>
+            </tr>
+        </table>
+
+
+
+        <br>表格单元格合并
+        <table border="1" width="300px" height="300px">
+            <tr>
+                <td colspan="2">单元格1,2</td>
+                <td>单元格3</td>
+                <td>单元格4</td>
+                <td>单元格5</td>
+            </tr>
+            <tr>
+                <td>单元格6</td>
+                <td>单元格7</td>
+                <td>单元格8</td>
+                <td>单元格9</td>
+                <td rowspan="2">单元格10,15</td>
+            </tr>
+            <tr>
+                <td colspan="2" rowspan="2">单元格11,12,16,17</td>
+                <td>单元格13</td>
+                <td>单元格14</td>
+            </tr>
+            <tr>
+                <td>单元格18</td>
+                <td>单元格19</td>
+                <td>单元格20</td>
+            </tr>
+            <tr>
+                <td>单元格21</td>
+                <td>单元格22</td>
+                <td>单元格23</td>
+                <td>单元格24</td>
+                <td>单元格25</td>
+            </tr>
+        </table>
+
+
+
+        
+        <br>form表单及表单元素
+        <form>
+            <input type="text">
+            <input type="submit">   
+        </form>
+        <form>
+            用户名：<input type="text">
+            密码：<input type="password">
+                <input type="submit" value="登录">
+        </form>
+        
+    </body>
+</html>

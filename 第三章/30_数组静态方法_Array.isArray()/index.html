@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // Array.isArray 方法返回一个布尔值，表示参数是否为数组。它可以弥补 typeof 运算符的不足
+        var arr = ["尚学堂", 100, true];
+        var num = 10
+
+        // typeof运算符无法判定该参数是否为数组
+        console.log(typeof arr);  // object
+
+        // 用Array.isArray判定该参数是否为数组  是，则返回true   不是，则返回false
+        console.log(Array.isArray(arr)); // true
+        console.log(Array.isArray(num)); // false
+
+    </script>
+    
+</body>
+</html>

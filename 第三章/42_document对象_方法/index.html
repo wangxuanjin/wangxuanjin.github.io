@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>hello1</div>
+    <div>hello2</div>
+
+    <p class="text">hello3</p>
+
+    <form name="login"></form>
+
+    <div id="root">哈哈哈</div>
+
+    <div class="nav">nav1</div>
+    <div class="nav">nav2</div>
+
+    <script>
+
+        var div1 = document.getElementsByTagName("div")[1];   // 可以根据后面数组读取指定位置元素
+        console.log(div1);
+        div1.innerHTML = "helloworld";       // 操控界面元素 (把hello2修改成helloworld)
+
+        var text = document.getElementsByClassName("text")[0];
+        console.log(text);
+        text.innerHTML = "hello!";
+
+        // 使用率极低
+        var name = document.getElementsByName("login");
+        console.log(name);
+
+        // 最常用
+        var root = document.getElementById("root");
+        console.log(root);
+        root.innerHTML = "呵呵呵";
+
+        var nav = document.querySelector(".nav");
+        console.log(nav);
+
+        var navs = document.querySelectorAll(".nav")[1]
+        console.log(navs);
+
+    </script>
+    
+</body>
+</html>

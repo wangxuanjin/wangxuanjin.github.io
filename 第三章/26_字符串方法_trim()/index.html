@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // trim 方法用于去除字符串两端的空格，返回一个新字符串，不改变原字符串（中间的不能去除）
+        var name = " itbaizhan "  //前后有空格
+        var result1 = name.trim()
+        console.log(name);  // itbaizhan (前后有空格)
+        console.log(result1);  //itbaizhan(前后空格去除)
+
+        //该方法去除的不仅是空格，还包括制表符（ \t 、 \v ）、换行符（ \n ）和回车符（ \r ）
+        var name = '\r\nitbaizhan \t'
+        var result2 = name.trim()
+        console.log(result2);  //itbaizhan(前后各种符号全都去除)
+
+        // ES6扩展方法， 去除后面空格：trimEnd()  去除前面空格：trimStart() 方法
+        var name2 = " itbaizhan "
+        var result3 = name2.trimStart()
+        console.log(result3);  //itbaizhan (前面没空格，后面有空格)
+        var result4 = name2.trimEnd()
+        console.log(result4);  // itbaizhan(前面有空格，后面没空格)
+
+    </script>
+    
+</body>
+</html>

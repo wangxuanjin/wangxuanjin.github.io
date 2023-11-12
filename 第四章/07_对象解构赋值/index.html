@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        var user = {
+            name: "iwen",
+            age: 20
+        }
+        console.log(user.name);  // iwen
+        console.log(user.age);   // 20
+
+        // 利用解构赋值方式简化他
+
+        const { name, age } = user;
+        console.log(name,age);  // iwen 20
+
+        const{log}=console;
+        log(name,age);      // iwen 20
+
+        const{abs,ceil,floor,random}=Math
+        log(random());   // 0-1之间的随机数
+
+
+        
+    </script>
+
+</body>
+
+</html>

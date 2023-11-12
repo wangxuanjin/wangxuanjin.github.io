@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="username">
+    <input type="text" id="password">
+
+    <script>
+
+        // input事件：会连续触发，比如用户每按下一次按键，就会触发一次input事件。
+        var username = document.getElementById("username")
+        username.oninput = function(e){
+            console.log(e.target.value);  // 读取数据 （输入什么得到什么）
+        }
+
+        // select事件：当在 <input>、<textarea> 里面选中文本时触发
+        username.onselect = function(){
+            console.log("选中了");
+        }
+
+        // Change事件：不会连续触发，只有当全部修改完成时才会触发 (失去焦点和回车的时候触发)
+        var password = document.getElementById("password")
+        password.onchange = function(e){
+            console.log(e.target.value);
+        }
+
+        
+
+    </script>
+    
+</body>
+</html>

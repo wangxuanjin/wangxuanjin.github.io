@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        var day =3;
+        switch(day){
+            case 0:
+                console.log("今天周一");
+                break;
+            case 1:
+                console.log("今天周二");
+                break
+            case 2:
+                console.log("今天周三");
+                break
+            case 3:
+                console.log("今天周四");
+                break;
+            case 4:
+                console.log("今天周五");
+                break;
+            case 5:
+                console.log("今天周六");
+                break; 
+            default:
+                console.log("今天周日");   //今天周四
+        }
+
+
+        //不加break的情况：会从满足条件那一项开始，后续都会执行(不是单单只执行满足条件的那一项)
+        var x = 1;
+        switch(x){
+            case 0:
+            console.log("x等于0");
+            case 1:
+            console.log("x等于1");
+            case 2:
+            console.log("x等于2");
+            default:
+            console.log("x等于未知");  //x等于1  x等于2  x等于未知
+        }
+
+    </script>
+    
+</body>
+</html>

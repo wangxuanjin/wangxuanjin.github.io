@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // substring 方法用于从原字符串取出子字符串并返回，不改变原字符串。
+        var name = "itbaizhan";
+        // 参数1：开始位置
+        // 参数2：结束位置（不包含该位置）
+        result1 = name.substring(2,8)
+        console.log(result1);  // baizha
+
+        // 如果省略第二个参数，则表示子字符串一直到原字符串的结束
+        result2 = name.substring(2)
+        console.log(result2);  // baizhan
+
+        // 如果第一个参数大于第二个参数， substring 方法会自动更换两个参数的位置
+        result3 = name.substring(8,2)
+        console.log(result3);  // baizha
+
+        // 如果参数是负数， substring 方法会自动将负数转为0
+        result4 = name.substring(-2,3)
+        console.log(result4);  // itb
+
+    </script>
+    
+</body>
+</html>

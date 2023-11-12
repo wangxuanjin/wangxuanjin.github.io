@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .root{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="root" id="root">
+        <div class="box" id="box"></div>
+    </div>
+    
+    <script>
+
+        var root = document.getElementById("root");
+        var box = document.getElementById("box");
+
+        // stopPropagation方法：阻止事件在 DOM 中继续传播，防止再触发定义在别的节点上的监听函数，但是不包括在当前节点上其他的事件监听函数
+        root.onclick = function(){
+            console.log("root");
+        }
+
+        box.onclick = function(e){
+            e.stopPropagation();  // 阻止事件冒泡：点击子元素，就不会触发父元素
+            console.log("box");
+        }
+    </script>
+</body>
+</html>

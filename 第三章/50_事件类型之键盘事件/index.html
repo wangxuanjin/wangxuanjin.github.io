@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="username">
+    <input type="text" id="password">
+
+    <script>
+
+        var username = document.getElementById("username")
+        // keydown：按下键盘时触发。
+        username.onkeydown = function(e){
+            console.log("按下了");      
+        }
+        // keyup：松开键盘时触发该事件
+        username.onkeyup = function(e){
+            console.log(e.target.value);  // value属性就是输入框的数据
+        }
+
+        // keypress：按下有值的键时触发，按下 Ctrl、Alt、Shift、Meta 这样无值的键无法触发
+        // 对于有值的键，按下时先触发keydown事件，再触发这个事件。
+        username.onkeypress = function(e){
+            console.log("ketpress");
+        }
+
+
+        var password = document.getElementById("password")
+        password.onkeyup = function(e){
+            console.log(e.keyCode);     // keycode:代表每个按键的唯一标识(回车：13)
+            if(e.keyCode ===13){
+                console.log("开始搜索");
+            }
+        }
+    </script>
+    
+</body>
+</html>

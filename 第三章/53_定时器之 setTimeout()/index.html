@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // var timer = setTimeout(function(){
+        //     console.log("三秒之后打印");
+        // },3000)
+        // clearTimeout(timer)  // 取消定时器
+
+        var name = "iwen"
+        var user = {
+            name: "itbaizhan",
+            getName:function(){
+                setTimeout(function(){
+                    console.log(this.name);  // this永远指向当前调用者
+                },1000)                      // 但是setTimeout 使得方法内部的 this 关键字指向全局环境
+                
+            }
+        }
+        user.getName();    // iwen
+
+    </script>
+    
+</body>
+</html>

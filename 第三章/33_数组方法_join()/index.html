@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // join 方法以指定参数作为分隔符，将所有数组成员连接为一个字符串返回。如果不提供参数，默认用逗号分隔
+        // 如果数组成员是 undefined 或 null 或空位，会被转成空字符串
+        var arr = [1,2,3,4,undefined,null];
+        console.log(arr.join()); // 1,2,3,4,,
+        console.log(arr.join("|")); // 1|2|3|4||
+        console.log(arr.join(""));  // 1234
+        console.log(arr.join(" ")); // 1 2 3 4
+
+        // 数组的 join 配合字符串的 split 可以实现数组与字符串的互换
+        var user = ["wxj","xt","hjl"]
+        var result = user.join(" ")
+        console.log(result);  // wxj xt hjl
+        console.log(result.split(" "));  // ['wxj', 'xt', 'hjl']
+
+    </script>
+    
+</body>
+</html>

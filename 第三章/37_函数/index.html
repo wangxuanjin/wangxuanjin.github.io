@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // 函数是一段可以反复调用的代码块
+        // 函数的声明：
+        // function 命令： function命令声明的代码区块，就是一个函数。
+        // function 命令后面是函数名(自拟)，函数名后面是一对圆括号，里面是传入函数的参数。函数体放在大括号里面。
+        function add(){
+            console.log("结果");
+        }
+        // 调用函数 (不调用则不会返回任何值)
+        add() // 结果
+
+
+        // 函数名的提升：可以先调用，后创建函数
+        // JavaScript 引擎将函数名视同变量名，所以采用function命令声明函数时，整个函数会像变量声明一样，被提升到代码头部
+        add1()  // 30
+        function add1(){
+            var x = 10;
+            var y = 20;
+            console.log(x+y);
+        }
+       
+
+        // 函数参数：
+        // 函数运行的时候，有时需要提供外部数据，不同的外部数据会得到不同的结果，这种外部数据就叫参数
+        function add2(x,y){
+            console.log(x+y);
+        }
+        add2(1,2);  // 3
+        add2(10,50);  // 60
+        add2(100,200);  // 300
+
+
+        // 函数参数
+        // 函数运行的时候，有时需要提供外部数据，不同的外部数据会得到不同的结果，这种外部数据就叫参数
+        function add3(x,y){
+            return x + y;
+        }
+        var result = add3(10,20)
+        console.log(result);  // 30
+        
+    </script>
+    
+</body>
+</html>

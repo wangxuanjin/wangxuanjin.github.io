@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        console.log(Date.now());  // 1694857106482
+        console.log(new Date());  // Sat Sep 16 2023 17:38:26 GMT+0800 (中国标准时间)
+
+        // 获取当前时间：2023-9-16 17：55：00：00  星期六
+        console.log(new Date().getTime());  // 1694857106482 (返回实例距离1970年1月1日00:00:00的毫秒数)
+        console.log(new Date().getYear());  //123 (返回距离1900的年数)
+        console.log(new Date().getFullYear());  //2023 (返回四位的年份)
+        console.log(new Date().getMonth());  // 8 (返回月份：0表示1月，11表示12月)
+        console.log(new Date().getDate());  // 16 (：返回实例对象对应每个月的几号（从1开始）)
+        console.log(new Date().getDay());   // 6 (返回星期几，星期日为0，星期一为1，以此类推)
+        console.log(new Date().getHours());  // 17 (返回小时（0-23）)
+        console.log(new Date().getMinutes());  // 55 (返回分钟（0-59）)
+        console.log(new Date().getSeconds());  // 返回秒（0-59）
+        console.log(new Date().getMilliseconds());  // 返回毫秒（0-999）
+
+        var year = new Date().getFullYear()
+        var month = new Date().getMonth() + 1
+        var date = new Date().getDate()
+        console.log(year + "-" + month + "-" + date);  // 2023-9-16
+
+        // 编写函数获得本年度剩余天数(阳历)
+        function leftDays(){
+            var today = new Date();
+            var endYear = new Date(today.getFullYear(),11, 31, 23, 59, 59, 999);
+            var result = (endYear.getTime() - today.getTime())/(1000*60*60*24)
+            console.log(result);
+        }
+        leftDays()  // 106.2390575 (本年度剩余天数约为106天)
+
+    </script>
+    
+</body>
+</html>

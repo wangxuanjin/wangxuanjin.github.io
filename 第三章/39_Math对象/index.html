@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // Math.abs 方法：返回参数值的绝对值
+        console.log(Math.abs(-10));  // 10
+
+        // Math.max 方法：返回参数之中最大的那个值
+        // Math.min 方法：返回最小的那个值。
+        // 如果参数为空, Math.min 返回 Infinity , Math.max 返回 -Infinity 。
+        console.log(Math.max(10,50,-2,16));  // 50
+        console.log(Math.min(10,50,-2,16));  // -2
+        console.log(Math.max());  // -Infinity
+        console.log(Math.min());  // Infinity
+
+        // Math.floor 方法：返回小于参数值的最大整数
+        // Math.ceil 方法：返回大于参数值的最小整数
+        console.log(Math.floor(3.2));  // 3
+        console.log(Math.floor(-3.2));  // -4
+        console.log(Math.ceil(3.2));  // 4
+        console.log(Math.ceil(-3.2));  // -3
+
+        // Math.random()方法： 返回0到1之间的一个伪随机数，可能等于0，但是一定小于1
+        console.log(Math.random());  // o到1之间的随机数
+
+        // 应用：生成一个10到20之间的随机整数
+        function names(min,max){
+            var result = Math.random() * (max-min)+min
+            result = Math.floor(result)
+            console.log(result);
+        }
+        names(10,20)  // 10到20之间的随机整数
+
+
+    </script>
+    
+</body>
+</html>

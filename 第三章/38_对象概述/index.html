@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // 创建一个对象user (里面可以创建任何属性)
+        var user = {
+            name:"itbaizhan",
+            age:16,
+            flag:true,
+            jobs:["sxt","itbaizhan"],
+            getnames:function add(){
+                console.log("iwen");
+            },
+            container:{
+                frontEnd:"WEB前端",
+                backEnd:["python","java"]
+            } 
+        }
+
+        // 对象的调取方式：对象名.属性
+        console.log(user.name);  // itbaizhan
+        console.log(user.age);  // 16
+        console.log(user.flag);  // true
+        console.log(user.jobs);  // ['sxt', 'itbaizhan']
+        
+        // 提取数组中的每个元素(数组转字符串，数组的遍历)
+        console.log(user.jobs.join(" ")); // sxt itbaizhan
+        for(var i in user.jobs){
+            console.log(user.jobs[i]);  // sxt
+                                        // itbaizhan
+        }
+        user.getnames()
+
+        // 链式调用
+        console.log(user.container.frontEnd);
+        console.log(user.container.backEnd);
+
+    </script>
+    
+</body>
+</html>

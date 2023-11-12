@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // split 方法按照给定规则分割字符串，返回一个由分割出来的子字符串组成的数组
+        var name1 = "it|sxt|itbaizhan";
+        console.log(name1.split("|"));  // ['it', 'sxt', 'itbaizhan'] === 数组
+
+        // 如果分割规则为空字符串，则返回数组的成员是原字符串的每一个字符。
+        var name2 = "s|x|t"
+        console.log(name2.split(""));  // ['s', '|', 'x', '|', 't']
+
+        // 如果省略参数，则返回数组的唯一成员就是原字符串
+        var name3 = 'it|sxt|bz'
+        console.log(name3.split());  // ['it|sxt|bz']
+
+        // split 方法还可以接受第二个参数，限定返回数组的最大成员数。
+        var name4 = "wxj|itbaizhan"  //(字符串长度为13)
+        console.log(name4.split("",5));  // ['w', 'x', 'j', '|', 'i']
+        console.log(name4.split("",14));  // ['w', 'x', 'j', '|', 'i', 't', 'b', 'a', 'i', 'z', 'h', 'a', 'n']
+                                          // 第二参数超过字符串长度，最后也只能返回当前字符串最长长度
+    </script>
+    
+</body>
+</html>

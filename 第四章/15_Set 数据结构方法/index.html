@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        var s = new Set([200,300]);
+
+        // add()：set 添加方法
+        s.add(100);
+        console.log(s);  // Set(3) {200, 300, 100}
+
+        // delete()：删除某个值，返回一个布尔值，表示删除是否
+        s.delete(200)
+        console.log(s);  // Set(2) {300, 100}
+
+        // has()：返回一个布尔值，表示该值是否为 Set 的成员
+        console.log(s.has(200));  // false
+        console.log(s.has(100));  // true
+        
+        // clear()：清除所有成员，没有返回值
+        s.clear()
+        console.log(s);   // Set(0) {size: 0}
+    </script>
+    
+</body>
+</html>

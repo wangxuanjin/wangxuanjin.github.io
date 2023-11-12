@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // 数组的遍历可以考虑使用for循环或while循环
+        var names = ["wxj","xt","hjq","hjl"];
+
+        // for循环
+        for(var i = 0;i < names.length;i++){
+            console.log(names[i]);  // wxj xt hjq hjl
+        }
+
+        // while循环
+        var i = 0;
+        while(i<names.length){
+            console.log(names[i]);  //wxj xt hjq hjl
+            i++;
+        }
+
+        // for...in遍历数组
+        for(var i in names){
+            console.log(names[i]);  //wxj xt hjq hjl
+        }
+    </script>
+    
+</body>
+</html>

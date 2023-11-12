@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 5px solid red;
+            padding: 10px;
+            margin: 20px;
+            background-color: blue;
+        }
+
+        h3{
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box" id="box"></div>
+    <h3>标题1</h3>
+    <h3>标题2</h3>
+    <h3>标题3</h3>
+    <h3>标题4</h3>
+    <h3>标题5</h3>
+
+
+    <script>
+
+        var box = document.getElementById("box")
+
+        // 获取元素高度和宽度（包括 padding 部分，但是不包括 border 、 margin）
+        console.log(box.clientHeight);  //220
+        console.log(box.clientWidth);   //220
+
+        // 获取视口高度（屏幕高度）
+        console.log(document.documentElement.clientHeight);  //658
+        // 获取网页总高度（页面内容的高度）
+        console.log(document.body.clientHeight);  //230
+
+
+        console.log("-----上下两种属性几乎无区别-----");
+
+
+        // 获取元素高度和宽度（包括 padding 部分，但是不包括 border 、 margin以及溢出的不可见内容）
+        console.log(box.scrollHeight);  //220
+        console.log(box.scrollWidth);   //220
+
+        // 获取视口高度（屏幕高度）
+        console.log(document.documentElement.scrollHeight);  //658
+        // 获取网页总高度（页面内容的高度）
+        console.log(document.body.scrollHeight);  //230
+
+
+        console.log("----------");
+
+
+        // 获取滚动高度|宽度 (可以一边滚动一边获取滚动的高度|宽度)
+        console.log(document.documentElement.scrollTop);
+        console.log(document.documentElement.scrollLeft);
+
+
+        console.log("----------");
+
+
+        // 获取元素的 CSS 水平高度和宽度（单位像素），包括元素本身的高度、padding 和 border
+        console.log(box.offsetHeight);  //230
+        console.log(box.offsetWidth);   //230
+
+    </script>
+    
+</body>
+</html>

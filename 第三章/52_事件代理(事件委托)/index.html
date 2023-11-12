@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id="list">
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+        <li>列表4</li>
+        <li>列表5</li>
+        <p>哈哈哈</p>
+    </ul>
+
+    <script>
+
+        var list = document.getElementById("list")
+        list.onclick = function(){
+            console.log("点击了");
+        }
+
+        // 点击所有的li标签才生效
+        list.addEventListener("click",function(e){
+            if(e.target.tagName.toLowerCase() === "li"){  // toLowerCase()：将大写“LI"变为小写“li”
+                console.log(e.target.innerHTML);
+            }
+        })
+    </script>
+    
+</body>
+</html>

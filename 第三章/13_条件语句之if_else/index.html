@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var flag = false;
+        if(flag){
+            console.log("我是孙悟空")
+        }else{
+            console.log("我是六耳猕猴");
+        }
+
+        //多个if...else连接
+        // 0-6：一周的七天
+        // 判断一下今天周几
+        var day = 3;  //周四
+        if(day===0){
+            console.log("今天周一");
+        }else if(day===1){
+            console.log("今天周二");
+        }else if(day===2){
+            console.log("今天周三");
+        }else if(day===3){
+            console.log("今天周四");
+        }else if(day===4){
+            console.log("今天周五");
+        }else if(day===5){
+            console.log("今天周六");
+        }else{
+            console.log("今天周日");
+        }
+
+        //if...else嵌套
+        var play = true;
+        var game = "王者荣耀";
+        //if...else的匹配规则：if总是找离他最近的一个else
+        if(play){
+            // console.log("我玩游戏");
+            if(game ==="王者荣耀"){
+                console.log("王者荣耀");  // 王者荣耀
+            }else{
+                console.log("和平精英");  
+            }
+        }else{
+            console.log("我不玩游戏")
+        }
+    </script>
+    
+</body>
+</html>

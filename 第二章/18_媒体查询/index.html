@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+        }
+        /* 设备小于768px加载样式(手机) */
+        @media screen and (max-width: 768px){
+            div{
+                background-color: blue;
+            }
+        }
+        /* 设备大于768px但小于992px加载样式(平板) */
+        @media screen and (min-width: 768px) and (max-width:992px){
+            div{
+                background-color: green;
+            }
+        }
+        /* 设备大于992px加载样式(电脑) */
+        @media screen and (min-width: 992px){
+            div{
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div></div>
+    
+</body>
+</html>

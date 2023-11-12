@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="btn">按钮</button>
+
+    <a href="https://itbaizhan.com" id="it">itbaizhan</a>
+
+    <script>
+        // Event.target属性：返回事件当前所在的节点(获得节点)
+        // Event.type属性：返回一个字符串，表示事件类型。事件的类型是在生成事件的时候。该属性只读
+        var btn = document.getElementById("btn")
+        btn.onclick = function(event){
+            console.log(event.target);  // <button id="btn">按钮</button>
+            console.log(event.type);    // click           
+            event.target.innerHTML = "点击之后"
+        }
+
+        // Event.preventDefault方法：取消浏览器对当前事件的默认行为。
+        // 比如点击链接后，浏览器默认会跳转到另一个页面，使用这个方法以后，就不会跳转了
+        var it = document.getElementById("it")
+        it.onclick = function(e){
+            e.preventDefault();  // 阻止了默认事件：点击链接后则不会跳转
+            console.log("点击了A");
+        }
+
+
+    </script>
+    
+</body>
+</html>

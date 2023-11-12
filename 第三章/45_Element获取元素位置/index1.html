@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: 100px;
+        }
+        .root{
+            width: 500px;
+            height: 500px;
+            background-color: blue;
+            margin: 50px;
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="root">
+        <div class="box" id="box"></div>
+    </div>
+
+    <script>
+
+        // 到定位父级左边|上边界的间距（父级未定位的话，以顶层文档为准）
+        var box = document.getElementById("box")
+        console.log(box.offsetLeft);  // 100
+        console.log(box.offsetTop);   // 0
+        
+    </script>
+
+</body>
+</html>

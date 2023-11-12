@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+    // shift 方法用于删除数组的第一个元素，并返回该元素。注意，该方法会改变原数组
+    var arr = ['尚学堂', 'itbaizhan', 'WEB前端'];
+    arr.shift();
+    console.log(arr);  // ['itbaizhan', 'WEB前端']
+
+    // shift 方法可以遍历并清空一个数组
+    var names = ["wxj","xt","hjq","hjl"]
+    var names1
+    while(names1=names.shift()){
+        console.log(names1);  //
+    }console.log(names);  // []
+
+    // unshift 方法用于在数组的第一个位置添加元素，并返回添加新元素后的数组长度。注意，该方法会改变原数组
+    // unshift 方法可以接受多个参数，这些参数都会添加到目标数组头部
+    var user = ["wxj","xt"]
+    user.unshift("hjq","hjl")
+    console.log(user);    // ['hjq', 'hjl', 'wxj', 'xt']
+    user.unshift("hjp")  
+    console.log(user);   // ['hjp', 'hjq', 'hjl', 'wxj', 'xt']
+
+    </script>
+    
+</body>
+</html>

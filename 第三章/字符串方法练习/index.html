@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        var name = "itbaizhan";
+        var name1 = "hello";
+        var name2 = '\r\nitbaizhan \t'
+
+        console.log(name.charAt(3));  // a
+
+        console.log(name.concat(name1));  // itbaizhanhello
+        console.log(name+name2);  //itbaizhan
+
+        console.log(name.substring(2,8)); // baiaha
+
+        console.log(name.substr(2,7));  //baizhan
+
+        console.log(name.indexOf("b"));  //2
+        console.log(name.indexOf("b,3"));  //-1
+
+        console.log(name2.trim());  //itbaizhan
+
+        console.log(name.split(""));  //['i', 't', 'b', 'a', 'i', 'z', 'h', 'a', 'n']
+        console.log(name.split("a")); //['itb', 'izh', 'n']
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form id="myform" onsubmit="submitHandle">
+        <input type="text" name="username">
+        <button id="resetbtn">重置</button>
+        <button>提交表单</button>
+    </form>
+
+    <script>
+
+        // reset 事件，submit 事件：件发生在表单对象 <form> 上，而不是发生在表单的成员上
+        var resetbtn = document.getElementById("resetbtn")
+        var myform = document.getElementById("myform")
+        resetbtn.onclick = function(){
+            myform.reset();                 //触发在表单上：清空表单
+        }
+
+        function submitHandle(){
+            console.log("想做的事情");
+        }
+    </script>
+    
+</body>
+</html>

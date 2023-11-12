@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            animation:dh 3s linear 0s infinite normal; 
+        }
+        div:hover {
+            animation-play-state: paused;
+            }
+        @keyframes dh{
+            0%{
+                background-color: red;
+            }
+            50%{
+                background-color: green;
+            }
+            100%{
+                background-color: blue;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+
+    <div></div>
+    
+</body>
+</html>
